@@ -30,9 +30,7 @@ export default {
   },
   mounted() {
     this.recognition = new this.recognitionApi();
-    console.log("new Recognition", this.recognition);
     this.speechRecognitionList = new this.grammarApi();
-    console.log("speechRecognitionList", this.speechRecognitionList);
     this.speechRecognitionList.addFromString(this.grammar, 1);
     this.recognition.grammars = this.speechRecognitionList;
     this.recognition.maxAlternatives = 1;

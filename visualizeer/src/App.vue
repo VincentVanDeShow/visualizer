@@ -4,20 +4,16 @@ import { RouterLink, RouterView } from "vue-router";
 
 <template>
   <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="@/assets/logo.svg"
-      width="125"
-      height="125"
-    />
-
+    <h1 class="logo">Some Research</h1>
     <div class="wrapper">
       <About />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/speech">Speech Recognition Api</RouterLink>
+        <RouterLink to="/audio-visualization" disabled
+          >Audio Visualization</RouterLink
+        >
       </nav>
     </div>
   </header>
@@ -33,10 +29,15 @@ header {
 
 .logo {
   display: block;
-  margin: 0 auto 2rem;
+  margin: 0px 0.5rem 0;
+  color: #fc431c;
+  text-align: right;
+  width: 10rem;
 }
 
 nav {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   font-size: 12px;
   text-align: center;
@@ -47,7 +48,7 @@ nav a.router-link-exact-active {
   color: var(--color-text);
 }
 
-nav a.router-link-exact-active:hover {
+nav a.router-link-exact-active:hover, nav a.router-link-exact-active:focus {
   background-color: transparent;
 }
 
@@ -65,24 +66,17 @@ nav a:first-of-type {
   header {
     display: flex;
     place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
   }
 
   header .wrapper {
     display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
   }
 
   nav {
     text-align: left;
-    margin-left: -1rem;
     font-size: 1rem;
-
     padding: 1rem 0;
     margin-top: 1rem;
   }

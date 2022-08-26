@@ -1,3 +1,21 @@
+@font-face {
+    font-family: "lato";
+    src: url("./fonts/lato-regular.ttf");
+  }
+
+  @font-face {
+    font-family: "latobold";
+    src: url("./fonts/lato-bold.ttf");
+  }
+  @font-face {
+    font-family: "latoblack";
+    src: url("./fonts/lato-black.ttf");
+  }
+  @font-face {
+    font-family: "latothin";
+    src: url("./fonts/lato-thin.ttf");
+  }
+
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
   --vt-c-white: #ffffff;
@@ -19,13 +37,16 @@
   --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
   --vt-c-text-dark-1: var(--vt-c-white);
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+
+  --font-heading: "latoblack";
+  --font-bold: "latobold";
+  --font-normal: "lato";
+  --font-thin: "latothin";
 }
 
 /* semantic color variables for this project */
 :root {
-  --color-background: var(--vt-c-white);
-  --color-background-soft: var(--vt-c-white-soft);
-  --color-background-mute: var(--vt-c-white-mute);
+  --color-background: #fff2e6;
 
   --color-border: var(--vt-c-divider-light-2);
   --color-border-hover: var(--vt-c-divider-light-1);
@@ -65,10 +86,14 @@ body {
   background: var(--color-background);
   transition: color 0.5s, background-color 0.5s;
   line-height: 1.6;
-  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: var(--font-normal), sans-serif;
   font-size: 15px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), Inter, -apple-system, sans-serif;
+  font-weight: 700;
 }

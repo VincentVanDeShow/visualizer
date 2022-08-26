@@ -25,7 +25,7 @@ export default {
         "#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;",
       recognition: null,
       speechRecognitionList: null,
-      confidence: 0,
+      confidence: "Confidence: ",
     };
   },
   mounted() {
@@ -49,7 +49,9 @@ export default {
           }
           console.log(`${result}: ${event.results[result][0].transcript}`);
           this.transcript = `${event.results[result][0].transcript}`;
-          this.confidence = `Confidence: ${event.results[result][0].confidence}`;
+          this.confidence = `Confidence: ${Math.floor(
+            (event.results[result][0].confidence / 1) * 100
+          )}%`;
         }
       };
     },

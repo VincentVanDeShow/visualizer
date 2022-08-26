@@ -48,7 +48,8 @@ nav a.router-link-exact-active {
   color: var(--color-text);
 }
 
-nav a.router-link-exact-active:hover, nav a.router-link-exact-active:focus {
+nav a.router-link-exact-active:hover,
+nav a.router-link-exact-active:focus {
   background-color: transparent;
 }
 

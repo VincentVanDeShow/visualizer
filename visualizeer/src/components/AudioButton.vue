@@ -1,15 +1,15 @@
 <template>
   <section>
-    <div>
-      <button @click="startRecognition">
-        Start Microphone SpeechRecognition
-      </button>
-      <button @click="stopRecognition">
-        stop Microphone SpeechRecognition
-      </button>
+    <div class="controls">
+      <button @click="startRecognition">🎙</button>
+      <button @click="stopRecognition">🤫</button>
     </div>
-    <p>{{ transcript }}</p>
-    <p>{{ confidence }}</p>
+    <div class="result">
+      <p class="result-transcript">
+        <span role="image"></span>{{ transcript }}
+      </p>
+      <p>{{ confidence }}</p>
+    </div>
   </section>
 </template>
 
@@ -65,7 +65,9 @@ export default {
 
 <style scoped>
 section {
-  width: 40rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 p {
   font-size: 1rem;
@@ -76,5 +78,28 @@ div {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+button {
+  font-size: 3rem;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.result {
+  margin: 2rem 0;
+  flex-direction: column;
+  width: 100%
+}
+
+.result > .result-transcript {
+  border: 1px solid black;
+  background-color: white;
+  padding: 0.5rem;
+  width: 100%;
+  height: 5rem;
 }
 </style>

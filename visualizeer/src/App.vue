@@ -6,14 +6,12 @@ import { RouterLink, RouterView } from "vue-router";
   <header>
     <h1 class="logo">Some Research</h1>
     <div class="wrapper">
-      <About />
+      <speech-view />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/speech">Speech Recognition Api</RouterLink>
-        <RouterLink to="/audio-visualization" disabled
-          >Audio Visualization</RouterLink
-        >
+        <RouterLink to="/audio-visualization">Audio Visualization</RouterLink>
       </nav>
     </div>
   </header>

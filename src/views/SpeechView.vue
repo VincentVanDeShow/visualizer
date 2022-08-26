@@ -7,7 +7,7 @@ import AudioButton from "@/components/AudioButton.vue";
     <h1>SpeechRecognition<span class="brackets">()</span></h1>
     <p>Open the console to see some output</p>
     <br />
-    <audio-button />
+    <AudioButton />
   </div>
 </template>
 

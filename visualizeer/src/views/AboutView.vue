@@ -14,6 +14,8 @@ import AudioButton from "@/components/AudioButton.vue";
   .about {
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
 }
